@@ -70,7 +70,7 @@ const talents = {
 			maxRank: 5,
 			coeff: function(buffs, rank=5) {
 				if (!(5487 in buffs) && !(9634 in buffs)) return getThreatCoefficient(1);
-				return getThreatCoefficient((1.3 + 0.03 * rank) / 1.3);
+                return getThreatCoefficient(1 + 0.03 * rank);
 			}
 		}
 	},
