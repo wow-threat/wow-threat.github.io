@@ -421,7 +421,7 @@ class NPC extends Unit {
 				if (unitInfo.invulnerabilityHistory[i].length) text += "<br>Invulnerability: " + unitInfo.invulnerabilityHistory[i].map(x=>invulnerabilityBuffs[x]).join("+");
 				texts.push(text);
 			}
-			let trace = {unitKey: u.key, x: t, y: unitInfo.threat, text: texts, type: "scatter", mode: "lines+markers", name: u.name + " " + u.initialCoeff.toFixed(2), hoverinfo: "name+text", line: {shape: "hv"}, marker: {line: {width: unitInfo.borderWidth, color: unitInfo.borderColor}}};
+			let trace = {unitKey: u.key, x: t, y: unitInfo.threat, text: texts, type: "scatter", mode: "lines+markers", name: u.name + " " + u.initialCoeff.toFixed(3), hoverinfo: "name+text", line: {shape: "hv"}, marker: {line: {width: unitInfo.borderWidth, color: unitInfo.borderColor}}};
 			plotData.push(trace);
 			if (colorByClass) trace.marker.color = classColors[u.type];
 			if (u.global && u.global.color && u.global.color !== "#000000") trace.marker.color = u.global.color;
